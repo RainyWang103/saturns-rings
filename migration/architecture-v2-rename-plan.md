@@ -1,5 +1,5 @@
 # Architecture V2 Skill rename / migration plan (proposal)
-Status: NOT EXECUTED. Existing installations remain unchanged.
+Status: SOURCE RENAME IN PR; DEPLOYMENT NOT EXECUTED. Existing installations remain unchanged.
 Proposed new skill id: art-culture-expert-guide
 Replaces: travel-architecture-deep-guide
 Scope: world architecture, fine art, archaeology, religious art, cultural history, museum objects, urban heritage and field interpretation.
