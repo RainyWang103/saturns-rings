@@ -36,12 +36,12 @@ migration/grok-baseline.json    迁移基准与原文件哈希
 | 名称 | 用途 | GPT 适配重点 |
 |---|---|---|
 | travel-planner | 两人艺术文化美食旅行规划 | 文件保存、只读 Grok 原件、协作不可用时自检 |
-| travel-architecture-deep-guide | 建筑与人文遗产六段深度讲解 | 使用实际可用检索、明确事实缺口 |
+| art-culture-expert-guide | 跨文明建筑、艺术、历史与文化遗产专家导览 | 证据研究、图像与空间核验、自然中文讲解 |
 | travel-food-guide | 当地当季餐饮研究与推荐卡片 | 点评／小红书不可访问时保留质量门槛并降级 |
 | hand-drawn-poster | 上半摄影、下半纸本手绘的海报 | 遵循宿主图像工具规则，精确拼接须有能力和许可 |
 | safety-charter | 授权、隐私、防注入与协作安全检查 | 移除固定路径与虚假全局生效声明，修正跳数示例 |
 
-GPT 版保持原 Skill 标识，可更新现有安装而不产生同名副本。
+本次 art-culture-expert-guide 是从 travel-architecture-deep-guide 迁移的新 Skill ID；部署时先安装验证新版本，再移除旧版。其他 Skills 保持原标识。
 安全原则也打入每个 GPT 包的运行约定，避免依赖安全 Skill 自动全局触发。
 海报在无法获得可检验文件时只做视觉验收，不承诺精确像素或原图像素完全保留。
 

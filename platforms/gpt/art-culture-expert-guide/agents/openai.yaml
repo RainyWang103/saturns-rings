@@ -1,0 +1,4 @@
+interface:
+  display_name: "Art & Culture Expert Guide · Saturn’s Rings"
+  short_description: "跨文明建筑、艺术、文化史与遗产专家导览"
+  default_prompt: "请使用 $art-culture-expert-guide，对指定建筑、艺术作品或文化遗产进行资料核实与专业中文现场讲解。"
