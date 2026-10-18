@@ -1,4 +1,0 @@
-interface:
-  display_name: "Travel Architecture Deep Guide · GPT"
-  short_description: "深入讲解建筑历史、结构材料、风格与现场参观动线和细看要点"
-  default_prompt: "请使用 $travel-architecture-deep-guide，对下列建筑做资深教授级深度讲解，先核实关键史实与材料，再按强制六段结构输出。"
