@@ -18,5 +18,5 @@ description: 面向全球城市与旅行的美食文化研究、餐厅品质评�
 - 硬约束：过敏、饮食禁忌、预算上限、时间限制与已确认预订优先；过敏安全不能凭菜单推断，须餐厅确认。参考 [用餐简报](references/dining-brief.md)。
 - 现场决策：需要预订时，实时可订性只能由相应预约渠道核实；不得编造空位、承诺已预订或擅自修改行程。
 - 餐饮节奏与交接：参考 [餐饮节奏](references/pacing.md) 和 [行程交接](references/itinerary-handoff.md)；复杂整日路线交 Travel Planner，未经授权不修改用户行程。
-- 保留工具、权限和数据安全边界；GPT 入口先读 [平台运行约定](references/platform-runtime.md)；按可用能力执行，不伪称访问。
+- 保留工具、权限和数据安全边界；遵守当前 Grok 宿主可用工具及授权约束，按实际能力执行，不伪称访问。
 - 具体城市/餐厅的回归案例只存放在仓库 tests/cases/travel-food-guide/，不放入通用运行时参考文件。
