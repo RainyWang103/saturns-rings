@@ -2,7 +2,7 @@
 name: travel-food-guide
 description: 面向全球城市与旅行的美食文化研究、餐厅品质评价、精选推荐、点菜建议与行程餐饮适配；以证据与当前用户意图为中心。
 ---
-# Travel Food Guide V2.3 · Saturn’s Rings
+# Travel Food Guide V2.4 · Saturn’s Rings
 
 开始前读取 [GPT 运行约定](references/platform-runtime.md)，确认工具与授权边界。
 
@@ -35,3 +35,6 @@ description: 面向全球城市与旅行的美食文化研究、餐厅品质评�
 
 ## V2.3 · Coffee Discovery
 咖啡相关请求执行 [咖啡专项研究](references/coffee-research.md)：精品咖啡、创意特调与地方传统咖啡分轨发现和评价，空间/品牌为跨轨维度；具体特调须核实菜单时效。保留 V2.2 餐厅发现机制。
+
+## V2.4 · Restaurant Discovery Intelligence
+开放式城市与宽泛餐厅品类问题，先按 [自适应信源发现](references/discovery-strategy.md) 从多入口构建候选，再按 [目的地美食雷达](references/city-food-radar.md) 动态检查料理风格、价格、区域和证据来源覆盖；用 [发现覆盖审查](references/discovery-coverage-audit.md) 只补搜实质遗漏。按 [独立评价与精选](references/evaluation-engine.md) 将发现资格、证据验证与最终推荐分开，不能因星级或热度直接淘汰候选，也不能因进入候选池就强推。宽泛品类的后续追问仅增量补充。保留 V2.3 咖啡分轨规则与现有授权、预约和时效边界。
