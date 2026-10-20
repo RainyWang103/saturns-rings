@@ -2,7 +2,7 @@
 name: travel-food-guide
 description: 面向全球城市与旅行的美食文化研究、餐厅品质评价、精选推荐、点菜建议与行程餐饮适配；以证据与当前用户意图为中心。
 ---
-# Travel Food Guide V2.1 · Saturn’s Rings
+# Travel Food Guide V2.2 · Saturn’s Rings
 
 开始前读取 [GPT 运行约定](references/platform-runtime.md)，确认工具与授权边界。
 
@@ -28,3 +28,7 @@ description: 面向全球城市与旅行的美食文化研究、餐厅品质评�
 - 餐饮节奏与交接：参考 [餐饮节奏](references/pacing.md) 和 [行程交接](references/itinerary-handoff.md)；复杂整日路线交 Travel Planner，未经授权不修改用户行程。
 - 保留工具、权限和数据安全边界；GPT 入口先读 [平台运行约定](references/platform-runtime.md)；按可用能力执行，不伪称访问。
 - 具体城市/餐厅的回归案例只存放在仓库 tests/cases/travel-food-guide/，不放入通用运行时参考文件。
+
+
+## V2.2 · Destination Culinary Discovery
+开放式目的地餐饮请求先执行 [目的地美食雷达](references/city-food-radar.md)，动态发现当地值得吃喝的门类，再按门类寻找多家候选并独立评价。默认标准深度，核心门类约3–5家，整体候选池约20–35家为弹性参考；不为凑数牺牲证据质量。完成前执行 [发现覆盖审查](references/discovery-coverage-audit.md)，核查本地经典、国际级餐饮、酒吧、咖啡及餐次的相关遗漏。榜单名次须按 [奖项核验](references/awards-and-rankings.md) 核实原始来源、年份与类别。多轮补充遵循 [连续性规则](references/conversation-continuity.md)，只增量重查受影响内容。明确指定单店、品类或临时用餐时不强制全景研究。
