@@ -1,4 +1,4 @@
 interface:
-  display_name: "手绘海报 · Little Universe"
+  display_name: "手绘海报"
   short_description: "一张照片生成上半摄影、下半极简手绘的编辑海报"
   default_prompt: "请使用 $hand-drawn-poster，将我上传的一张照片制作成 3:4 手绘海报，上半保留照片，下半为极简纸本手绘，各占 50%，默认无文字。"

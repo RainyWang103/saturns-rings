@@ -1,4 +1,4 @@
 interface:
-  display_name: "Travel Planner · Little Universe"
+  display_name: "Travel Planner"
   short_description: "两人文化旅行：体验发现、路线取舍、住宿交通、核实排程与模板交付"
   default_prompt: "请使用 $travel-planner，依据已有条件发现值得体验的内容，比较路线与住宿交通，核实关键条件，再交付适合当前阶段的方案；局部调整只处理受影响部分。"
