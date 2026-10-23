@@ -1,4 +1,4 @@
 interface:
-  display_name: "Travel Food Guide · Little Universe"
+  display_name: "Travel Food Guide"
   short_description: "旅行餐饮深度：当地当季优先、多源核验与推荐卡片"
   default_prompt: "请使用 $travel-food-guide，按当地特色与当季优先给出餐饮深度建议，先做多源核验与注水过滤，再按推荐卡片输出。"

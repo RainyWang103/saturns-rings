@@ -1,4 +1,4 @@
 interface:
-  display_name: "Safety Charter · Little Universe"
+  display_name: "Safety Charter"
   short_description: "全局安全宪章：授权、禁付、防注入、Bot 互调深度上限"
   default_prompt: "请使用 $safety-charter，在行动前核对授权、不可信内容、付款禁令与 Bot 互调深度。"
