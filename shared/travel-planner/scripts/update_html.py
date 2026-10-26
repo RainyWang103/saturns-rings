@@ -15,18 +15,27 @@ import sys
 from urllib.parse import unquote, urlsplit
 
 
+# Strict, explicitly closed template subset; optional-end-tag legacy HTML uses
+# the normal delivery workflow instead of being silently repaired by this tool.
+VOID_TAGS = frozenset(('area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input',
+                       'link', 'meta', 'param', 'source', 'track', 'wbr'))
+
+
 class Document(HTMLParser):
     def __init__(self, source):
         super().__init__(convert_charrefs=True)
         self.ids, self.checks, self.links, self.styles = [], [], [], []
         self.errors = []
         self.tags = Counter()
+        self.stack = []
         self.blocks = {'style': [], 'script': []}
         self.active = None
         self.feed(source)
         self.close()
         if self.active:
             self.errors.append('unclosed style/script')
+        if self.stack:
+            self.errors.append('unclosed element')
         if any(self.tags[tag] != 1 for tag in ('html', 'head', 'body')):
             self.errors.append('expected one html/head/body shell')
         for kind, values in (('id', self.ids), ('data-check', self.checks)):
@@ -42,6 +51,8 @@ class Document(HTMLParser):
 
     def handle_starttag(self, tag, attributes):
         self.tags[tag] += 1
+        if tag not in VOID_TAGS:
+            self.stack.append(tag)
         attrs = dict(attributes)
         if len(attrs) != len(attributes):
             self.errors.append('duplicate attribute')
@@ -67,7 +78,11 @@ class Document(HTMLParser):
             self.ids.append(attrs['id'] or '')
         if 'data-check' in attrs:
             self.checks.append(attrs['data-check'] or '')
-        if tag in ('iframe', 'object', 'embed', 'base', 'form'):
+            if tag != 'input' or (attrs.get('type') or '').lower() != 'checkbox':
+                self.errors.append('data-check requires a checkbox input')
+        if tag in ('iframe', 'object', 'embed', 'base', 'form', 'template',
+                   'textarea', 'xmp', 'plaintext', 'noscript', 'noembed',
+                   'noframes', 'frameset', 'frame'):
             self.errors.append('unsupported active element')
         if tag == 'meta' and (attrs.get('http-equiv') or '').lower() == 'refresh':
             self.errors.append('redirect metadata')
@@ -77,7 +92,19 @@ class Document(HTMLParser):
             self.blocks[tag].append({'attrs': attributes, 'text': ''})
             self.active = tag
 
+    def handle_startendtag(self, tag, attributes):
+        foreign = tag in ('svg', 'math') or any(t in ('svg', 'math') for t in self.stack)
+        if tag not in VOID_TAGS and not foreign:
+            self.errors.append('self-closing non-void HTML element')
+        self.handle_starttag(tag, attributes)
+        if tag not in VOID_TAGS:
+            self.handle_endtag(tag)
+
     def handle_endtag(self, tag):
+        if not self.stack or self.stack[-1] != tag:
+            self.errors.append('mismatched closing element')
+        else:
+            self.stack.pop()
         if tag == self.active:
             self.active = None
 
@@ -103,9 +130,9 @@ def patch_html(source_bytes, edits, expected_sha256):
         old, new = edit['old'], edit['new']
         if not isinstance(old, str) or not isinstance(new, str) or not old or old == new:
             raise ValueError('patch values must be strings and make a change')
-        if source.count(old) != 1:
+        start = source.find(old)
+        if start < 0 or source.find(old, start + 1) >= 0:
             raise ValueError('old text must match exactly once; include surrounding context')
-        start = source.index(old)
         spans.append((start, start + len(old), new))
     spans.sort()
     if any(left[1] > right[0] for left, right in zip(spans, spans[1:])):
@@ -117,10 +144,11 @@ def patch_html(source_bytes, edits, expected_sha256):
     errors = list(after.errors)
     if before.blocks != after.blocks or before.styles != after.styles:
         errors.append('CSS/script changed (including trip storage key)')
-    if not set(before.ids).issubset(after.ids):
-        errors.append('existing IDs removed or renamed')
-    if not set(before.checks).issubset(after.checks):
-        errors.append('existing checkbox keys removed or renamed')
+    for kind, original, changed in (('IDs', before.ids, after.ids),
+                                    ('checkbox keys', before.checks, after.checks)):
+        original_set = set(original)
+        if [value for value in changed if value in original_set] != original:
+            errors.append(f'existing {kind} removed, renamed or reordered')
     if errors:
         raise ValueError('updated document failed checks: ' + ', '.join(sorted(set(errors))))
     return result.encode('utf-8')

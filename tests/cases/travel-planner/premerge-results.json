@@ -1,0 +1,936 @@
+{
+  "schema": 1,
+  "scope": "Offline isolated replays, not ChatGPT Astra end-to-end benchmark",
+  "concurrent_runs": 6,
+  "model": "Inherited host model; exact product model ID and reasoning duration not exposed",
+  "ttfur_ms": null,
+  "tokens": null,
+  "cost": null,
+  "runs": [
+    {
+      "run": "a1",
+      "seconds": 322.1,
+      "read_operations": 31,
+      "emitted_bytes": 83180,
+      "same_content_reads_beyond_first": 2,
+      "answer_bytes": 25093,
+      "answer_sha256": "932b1791fda196ef3586fb59c1d3e47c1fff2efa40a916da2f1b0a623d58d2c3",
+      "source_commit": "c14c72bfac03ddb8b30d1533f767285f4703f03b",
+      "input_sha256": "429427bb3d6b24aed996096453988c01c0fef285ef81aee47ed263b6376ff429",
+      "read_events": [
+        {
+          "material": "@input",
+          "bytes": 4817,
+          "sha256": "429427bb3d6b24aed996096453988c01c0fef285ef81aee47ed263b6376ff429"
+        },
+        {
+          "material": "travel-planner/SKILL.md",
+          "bytes": 2983,
+          "sha256": "241420bf0a95028b8a1ff1b454fb09823a2845205dea0cd0ad1a53603d5652dc"
+        },
+        {
+          "material": "travel-planner/references/platform-runtime.md",
+          "bytes": 2485,
+          "sha256": "33d4921022518e3500704b7078fd413f74fe1253474307725eff17090b24fa06"
+        },
+        {
+          "material": "travel-planner/references/security-storage.md",
+          "bytes": 958,
+          "sha256": "cedde27880415dc5f674dfcd3dbf5897b8651742ce86c5782caff161602aec03"
+        },
+        {
+          "material": "travel-planner/references/workflow.md",
+          "bytes": 3358,
+          "sha256": "7269d8c6cdffc28072c378f7a957d1a5c7815f5f5a7e1afa986d0c75680565fa"
+        },
+        {
+          "material": "travel-planner/references/preferences.md",
+          "bytes": 1417,
+          "sha256": "dfc41b2a11d88525c86dd53dc576826da8d5fad59bd0a73551a0e86c2304bb8c"
+        },
+        {
+          "material": "travel-planner/references/discovery-decisions.md",
+          "bytes": 2985,
+          "sha256": "499433d92e404b06f7c04202b71983f7e131e1e0f4da9e994bde36577bda1044"
+        },
+        {
+          "material": "travel-planner/references/research-verification.md",
+          "bytes": 3932,
+          "sha256": "2dec715bcccef967224c1f6ba220f7beb8995aa95e3f257e59274c3ca4d07a8f"
+        },
+        {
+          "material": "travel-planner/references/stays-transport.md",
+          "bytes": 2247,
+          "sha256": "79eba60bfad48ac7ec0215a7146126a917a6c0f809916c5fc1c274541f8d2fee"
+        },
+        {
+          "material": "travel-planner/references/itinerary-scheduling.md",
+          "bytes": 3638,
+          "sha256": "11a0d857bafd7404e038cf2f212fc496dfd73642a7faee597cb34b7677f1635b"
+        },
+        {
+          "material": "travel-planner/references/bookings-budget.md",
+          "bytes": 1023,
+          "sha256": "de469f2764fce65c9edeb10af79cb5516bc3ca3d54e604be4fd8fec1299a6d0c"
+        },
+        {
+          "material": "travel-planner/references/deliverables.md",
+          "bytes": 10125,
+          "sha256": "b81ea7c0f7037823bc5c7620eba59a573a190e47e2c472c5646f0805a1bf34c3"
+        },
+        {
+          "material": "travel-planner/references/team-review.md",
+          "bytes": 3312,
+          "sha256": "0079e874bc2a5957c07fe5693e2008e23d1ef3461ac6a811043aa0d3b2dc8ea9"
+        },
+        {
+          "material": "travel-food-guide/SKILL.md",
+          "bytes": 4847,
+          "sha256": "f271bae0bd4f676156e88ae28e61a367c4fcac397030c735a0949c468bc73b50"
+        },
+        {
+          "material": "art-culture-expert-guide/SKILL.md",
+          "bytes": 4170,
+          "sha256": "1a16f09ed91bc7b67ae816a9825fb8d3e4fecdc56d6b6789aebddf02f245a5a3"
+        },
+        {
+          "material": "travel-food-guide/references/platform-runtime.md",
+          "bytes": 2485,
+          "sha256": "33d4921022518e3500704b7078fd413f74fe1253474307725eff17090b24fa06"
+        },
+        {
+          "material": "travel-food-guide/references/research-verification.md",
+          "bytes": 2273,
+          "sha256": "820664ae9535f002f0fa6a0cd4b6a92d2a1e5ec9cd398a3fa86df9204ec92162"
+        },
+        {
+          "material": "travel-food-guide/references/culinary-research.md",
+          "bytes": 1357,
+          "sha256": "ca9e6f6b14b7d5acb5471d53db3cdd10dab66dda1dcf6b5e748dd8f5ff105504"
+        },
+        {
+          "material": "travel-food-guide/references/evaluation-engine.md",
+          "bytes": 2452,
+          "sha256": "c1a7eac832219a1720e825792aa1892f5caf6b5ae5ef3e847e4c9d774106fcd6"
+        },
+        {
+          "material": "travel-food-guide/references/delivery-modes.md",
+          "bytes": 2671,
+          "sha256": "35008ff00ac0aaea973d382c0390f6f773cc22eff23ffac3edb2f88528d4868d"
+        },
+        {
+          "material": "travel-food-guide/references/coffee-research.md",
+          "bytes": 3353,
+          "sha256": "7ea106a782eed7547ceb886d8b8ef6bcaa3c87d3665c23cf5db585cbf43e9afa"
+        },
+        {
+          "material": "travel-food-guide/references/itinerary-handoff.md",
+          "bytes": 1426,
+          "sha256": "25d9b629a333e7a4d17379095d8f6cb66eed7747b2d9a251c0d426827dd3e71a"
+        },
+        {
+          "material": "art-culture-expert-guide/references/platform-runtime.md",
+          "bytes": 2485,
+          "sha256": "33d4921022518e3500704b7078fd413f74fe1253474307725eff17090b24fa06"
+        },
+        {
+          "material": "art-culture-expert-guide/references/research-levels.md",
+          "bytes": 1279,
+          "sha256": "e7d4db3ad7fc690df6d7c475a65d75999d5535697e368427192c7b1c03acbfc4"
+        },
+        {
+          "material": "art-culture-expert-guide/references/interpretation-engine.md",
+          "bytes": 997,
+          "sha256": "c74297be61de43b3af050279f55e4017db5dc05b5d772981d0652d526d2e0e1f"
+        },
+        {
+          "material": "art-culture-expert-guide/references/delivery-modes.md",
+          "bytes": 1538,
+          "sha256": "744ebb653e35d39a26df62237c0ee95971ed83fba514a62fdd920f374b0d8093"
+        },
+        {
+          "material": "art-culture-expert-guide/references/research-protocol.md",
+          "bytes": 1350,
+          "sha256": "e2afe4c4e1e979f17a952d575434c2c7f86218f4f672012344f003c397dbc4f6"
+        },
+        {
+          "material": "art-culture-expert-guide/references/domain-frameworks.md",
+          "bytes": 2940,
+          "sha256": "cfc3c65a941bde5b8eb3d5824f3d02d7017c248cb4ab9a49efc5301db82e5182"
+        },
+        {
+          "material": "art-culture-expert-guide/references/spatial-image-verification.md",
+          "bytes": 1530,
+          "sha256": "a9b3578e27abff298d5286bb63209753cb8d16c055385d61cd506d1af50107c2"
+        },
+        {
+          "material": "art-culture-expert-guide/references/narrative-field-guide.md",
+          "bytes": 1328,
+          "sha256": "0561a95ec4c0ca49f1d26792955db8e724db9d64e45877054379fa885287b29c"
+        },
+        {
+          "material": "art-culture-expert-guide/references/quality-gates.md",
+          "bytes": 1419,
+          "sha256": "21f2ae4525cac8dd4e6175bd40b0aed97e98827d3011e72ebca0b2380e463ee9"
+        }
+      ]
+    },
+    {
+      "run": "b1",
+      "seconds": 268.5,
+      "read_operations": 33,
+      "emitted_bytes": 100800,
+      "same_content_reads_beyond_first": 5,
+      "answer_bytes": 22839,
+      "answer_sha256": "6c5fb33001f1355f56b87c943495b3da6f4acd6f5785313ad476414f32bfe8ad",
+      "source_commit": "b3d3c55340369d26a25b34895193adc5c7d44d3d",
+      "input_sha256": "429427bb3d6b24aed996096453988c01c0fef285ef81aee47ed263b6376ff429",
+      "read_events": [
+        {
+          "material": "@input",
+          "bytes": 4817,
+          "sha256": "429427bb3d6b24aed996096453988c01c0fef285ef81aee47ed263b6376ff429"
+        },
+        {
+          "material": "travel-planner/SKILL.md",
+          "bytes": 3154,
+          "sha256": "13ed15ff6ae1aa7674191538081a45dbaf97a46241484ac76597621bb2504561"
+        },
+        {
+          "material": "travel-planner/references/platform-runtime.md",
+          "bytes": 2485,
+          "sha256": "33d4921022518e3500704b7078fd413f74fe1253474307725eff17090b24fa06"
+        },
+        {
+          "material": "travel-planner/references/security-storage.md",
+          "bytes": 958,
+          "sha256": "cedde27880415dc5f674dfcd3dbf5897b8651742ce86c5782caff161602aec03"
+        },
+        {
+          "material": "travel-planner/references/workflow.md",
+          "bytes": 5882,
+          "sha256": "56cb0e027821ba2b8be7c764a18f3120332737a6e9f4b4fceb557f22b2abf9ac"
+        },
+        {
+          "material": "travel-planner/references/preferences.md",
+          "bytes": 1417,
+          "sha256": "dfc41b2a11d88525c86dd53dc576826da8d5fad59bd0a73551a0e86c2304bb8c"
+        },
+        {
+          "material": "travel-planner/references/discovery-decisions.md",
+          "bytes": 2985,
+          "sha256": "499433d92e404b06f7c04202b71983f7e131e1e0f4da9e994bde36577bda1044"
+        },
+        {
+          "material": "travel-planner/references/research-verification.md",
+          "bytes": 6038,
+          "sha256": "df7bc2c54b57e715d2468801a8c99d1216cf4a37e34e2b83d7ce40741158fbb9"
+        },
+        {
+          "material": "travel-planner/references/stays-transport.md",
+          "bytes": 2247,
+          "sha256": "79eba60bfad48ac7ec0215a7146126a917a6c0f809916c5fc1c274541f8d2fee"
+        },
+        {
+          "material": "travel-planner/references/itinerary-scheduling.md",
+          "bytes": 3638,
+          "sha256": "11a0d857bafd7404e038cf2f212fc496dfd73642a7faee597cb34b7677f1635b"
+        },
+        {
+          "material": "travel-planner/references/bookings-budget.md",
+          "bytes": 1023,
+          "sha256": "de469f2764fce65c9edeb10af79cb5516bc3ca3d54e604be4fd8fec1299a6d0c"
+        },
+        {
+          "material": "travel-planner/references/deliverables.md",
+          "bytes": 12426,
+          "sha256": "4b4a82256161f67ddf7509180408d77cd175c3eadbec2563673772d9abb7634a"
+        },
+        {
+          "material": "travel-planner/references/team-review.md",
+          "bytes": 3333,
+          "sha256": "1879643449b3e49a704cb8767e042e53a6d8a745bfc5e32c041a95ad40b2d84f"
+        },
+        {
+          "material": "travel-planner/references/research-verification.md",
+          "bytes": 6038,
+          "sha256": "df7bc2c54b57e715d2468801a8c99d1216cf4a37e34e2b83d7ce40741158fbb9"
+        },
+        {
+          "material": "travel-planner/references/stays-transport.md",
+          "bytes": 2247,
+          "sha256": "79eba60bfad48ac7ec0215a7146126a917a6c0f809916c5fc1c274541f8d2fee"
+        },
+        {
+          "material": "travel-planner/references/itinerary-scheduling.md",
+          "bytes": 3638,
+          "sha256": "11a0d857bafd7404e038cf2f212fc496dfd73642a7faee597cb34b7677f1635b"
+        },
+        {
+          "material": "travel-food-guide/SKILL.md",
+          "bytes": 4847,
+          "sha256": "f271bae0bd4f676156e88ae28e61a367c4fcac397030c735a0949c468bc73b50"
+        },
+        {
+          "material": "art-culture-expert-guide/SKILL.md",
+          "bytes": 4170,
+          "sha256": "1a16f09ed91bc7b67ae816a9825fb8d3e4fecdc56d6b6789aebddf02f245a5a3"
+        },
+        {
+          "material": "travel-food-guide/references/platform-runtime.md",
+          "bytes": 2485,
+          "sha256": "33d4921022518e3500704b7078fd413f74fe1253474307725eff17090b24fa06"
+        },
+        {
+          "material": "travel-food-guide/references/research-verification.md",
+          "bytes": 2273,
+          "sha256": "820664ae9535f002f0fa6a0cd4b6a92d2a1e5ec9cd398a3fa86df9204ec92162"
+        },
+        {
+          "material": "travel-food-guide/references/culinary-research.md",
+          "bytes": 1357,
+          "sha256": "ca9e6f6b14b7d5acb5471d53db3cdd10dab66dda1dcf6b5e748dd8f5ff105504"
+        },
+        {
+          "material": "travel-food-guide/references/evaluation-engine.md",
+          "bytes": 2452,
+          "sha256": "c1a7eac832219a1720e825792aa1892f5caf6b5ae5ef3e847e4c9d774106fcd6"
+        },
+        {
+          "material": "travel-food-guide/references/delivery-modes.md",
+          "bytes": 2671,
+          "sha256": "35008ff00ac0aaea973d382c0390f6f773cc22eff23ffac3edb2f88528d4868d"
+        },
+        {
+          "material": "travel-food-guide/references/coffee-research.md",
+          "bytes": 3353,
+          "sha256": "7ea106a782eed7547ceb886d8b8ef6bcaa3c87d3665c23cf5db585cbf43e9afa"
+        },
+        {
+          "material": "art-culture-expert-guide/references/platform-runtime.md",
+          "bytes": 2485,
+          "sha256": "33d4921022518e3500704b7078fd413f74fe1253474307725eff17090b24fa06"
+        },
+        {
+          "material": "art-culture-expert-guide/references/research-levels.md",
+          "bytes": 1279,
+          "sha256": "e7d4db3ad7fc690df6d7c475a65d75999d5535697e368427192c7b1c03acbfc4"
+        },
+        {
+          "material": "art-culture-expert-guide/references/interpretation-engine.md",
+          "bytes": 997,
+          "sha256": "c74297be61de43b3af050279f55e4017db5dc05b5d772981d0652d526d2e0e1f"
+        },
+        {
+          "material": "art-culture-expert-guide/references/delivery-modes.md",
+          "bytes": 1538,
+          "sha256": "744ebb653e35d39a26df62237c0ee95971ed83fba514a62fdd920f374b0d8093"
+        },
+        {
+          "material": "art-culture-expert-guide/references/quality-gates.md",
+          "bytes": 1419,
+          "sha256": "21f2ae4525cac8dd4e6175bd40b0aed97e98827d3011e72ebca0b2380e463ee9"
+        },
+        {
+          "material": "art-culture-expert-guide/references/research-protocol.md",
+          "bytes": 1350,
+          "sha256": "e2afe4c4e1e979f17a952d575434c2c7f86218f4f672012344f003c397dbc4f6"
+        },
+        {
+          "material": "art-culture-expert-guide/references/domain-frameworks.md",
+          "bytes": 2940,
+          "sha256": "cfc3c65a941bde5b8eb3d5824f3d02d7017c248cb4ab9a49efc5301db82e5182"
+        },
+        {
+          "material": "art-culture-expert-guide/references/spatial-image-verification.md",
+          "bytes": 1530,
+          "sha256": "a9b3578e27abff298d5286bb63209753cb8d16c055385d61cd506d1af50107c2"
+        },
+        {
+          "material": "art-culture-expert-guide/references/narrative-field-guide.md",
+          "bytes": 1328,
+          "sha256": "0561a95ec4c0ca49f1d26792955db8e724db9d64e45877054379fa885287b29c"
+        }
+      ]
+    },
+    {
+      "run": "b2",
+      "seconds": 251.7,
+      "read_operations": 16,
+      "emitted_bytes": 62326,
+      "same_content_reads_beyond_first": 3,
+      "answer_bytes": 20640,
+      "answer_sha256": "b04fafc0175e8c931ef7d56d395b2a31844bf7496cff00bdf1a3a84726a05641",
+      "source_commit": "b3d3c55340369d26a25b34895193adc5c7d44d3d",
+      "input_sha256": "429427bb3d6b24aed996096453988c01c0fef285ef81aee47ed263b6376ff429",
+      "read_events": [
+        {
+          "material": "@input",
+          "bytes": 4817,
+          "sha256": "429427bb3d6b24aed996096453988c01c0fef285ef81aee47ed263b6376ff429"
+        },
+        {
+          "material": "travel-planner/SKILL.md",
+          "bytes": 3154,
+          "sha256": "13ed15ff6ae1aa7674191538081a45dbaf97a46241484ac76597621bb2504561"
+        },
+        {
+          "material": "travel-planner/references/platform-runtime.md",
+          "bytes": 2485,
+          "sha256": "33d4921022518e3500704b7078fd413f74fe1253474307725eff17090b24fa06"
+        },
+        {
+          "material": "travel-planner/references/security-storage.md",
+          "bytes": 958,
+          "sha256": "cedde27880415dc5f674dfcd3dbf5897b8651742ce86c5782caff161602aec03"
+        },
+        {
+          "material": "travel-planner/references/workflow.md",
+          "bytes": 5882,
+          "sha256": "56cb0e027821ba2b8be7c764a18f3120332737a6e9f4b4fceb557f22b2abf9ac"
+        },
+        {
+          "material": "travel-planner/references/preferences.md",
+          "bytes": 1417,
+          "sha256": "dfc41b2a11d88525c86dd53dc576826da8d5fad59bd0a73551a0e86c2304bb8c"
+        },
+        {
+          "material": "travel-planner/references/discovery-decisions.md",
+          "bytes": 2985,
+          "sha256": "499433d92e404b06f7c04202b71983f7e131e1e0f4da9e994bde36577bda1044"
+        },
+        {
+          "material": "travel-planner/references/research-verification.md",
+          "bytes": 6038,
+          "sha256": "df7bc2c54b57e715d2468801a8c99d1216cf4a37e34e2b83d7ce40741158fbb9"
+        },
+        {
+          "material": "travel-planner/references/stays-transport.md",
+          "bytes": 2247,
+          "sha256": "79eba60bfad48ac7ec0215a7146126a917a6c0f809916c5fc1c274541f8d2fee"
+        },
+        {
+          "material": "travel-planner/references/itinerary-scheduling.md",
+          "bytes": 3638,
+          "sha256": "11a0d857bafd7404e038cf2f212fc496dfd73642a7faee597cb34b7677f1635b"
+        },
+        {
+          "material": "travel-planner/references/bookings-budget.md",
+          "bytes": 1023,
+          "sha256": "de469f2764fce65c9edeb10af79cb5516bc3ca3d54e604be4fd8fec1299a6d0c"
+        },
+        {
+          "material": "travel-planner/references/deliverables.md",
+          "bytes": 12426,
+          "sha256": "4b4a82256161f67ddf7509180408d77cd175c3eadbec2563673772d9abb7634a"
+        },
+        {
+          "material": "travel-planner/references/team-review.md",
+          "bytes": 3333,
+          "sha256": "1879643449b3e49a704cb8767e042e53a6d8a745bfc5e32c041a95ad40b2d84f"
+        },
+        {
+          "material": "travel-planner/references/research-verification.md",
+          "bytes": 6038,
+          "sha256": "df7bc2c54b57e715d2468801a8c99d1216cf4a37e34e2b83d7ce40741158fbb9"
+        },
+        {
+          "material": "travel-planner/references/stays-transport.md",
+          "bytes": 2247,
+          "sha256": "79eba60bfad48ac7ec0215a7146126a917a6c0f809916c5fc1c274541f8d2fee"
+        },
+        {
+          "material": "travel-planner/references/itinerary-scheduling.md",
+          "bytes": 3638,
+          "sha256": "11a0d857bafd7404e038cf2f212fc496dfd73642a7faee597cb34b7677f1635b"
+        }
+      ]
+    },
+    {
+      "run": "a2",
+      "seconds": 324.5,
+      "read_operations": 37,
+      "emitted_bytes": 92375,
+      "same_content_reads_beyond_first": 2,
+      "answer_bytes": 22865,
+      "answer_sha256": "13c3057d383eef64fb3847d931558e246d2077175f68328e523d9c41c4e8eaf2",
+      "source_commit": "c14c72bfac03ddb8b30d1533f767285f4703f03b",
+      "input_sha256": "429427bb3d6b24aed996096453988c01c0fef285ef81aee47ed263b6376ff429",
+      "read_events": [
+        {
+          "material": "@input",
+          "bytes": 4817,
+          "sha256": "429427bb3d6b24aed996096453988c01c0fef285ef81aee47ed263b6376ff429"
+        },
+        {
+          "material": "travel-planner/SKILL.md",
+          "bytes": 2983,
+          "sha256": "241420bf0a95028b8a1ff1b454fb09823a2845205dea0cd0ad1a53603d5652dc"
+        },
+        {
+          "material": "travel-planner/references/platform-runtime.md",
+          "bytes": 2485,
+          "sha256": "33d4921022518e3500704b7078fd413f74fe1253474307725eff17090b24fa06"
+        },
+        {
+          "material": "travel-planner/references/security-storage.md",
+          "bytes": 958,
+          "sha256": "cedde27880415dc5f674dfcd3dbf5897b8651742ce86c5782caff161602aec03"
+        },
+        {
+          "material": "travel-planner/references/workflow.md",
+          "bytes": 3358,
+          "sha256": "7269d8c6cdffc28072c378f7a957d1a5c7815f5f5a7e1afa986d0c75680565fa"
+        },
+        {
+          "material": "travel-planner/references/preferences.md",
+          "bytes": 1417,
+          "sha256": "dfc41b2a11d88525c86dd53dc576826da8d5fad59bd0a73551a0e86c2304bb8c"
+        },
+        {
+          "material": "travel-planner/references/discovery-decisions.md",
+          "bytes": 2985,
+          "sha256": "499433d92e404b06f7c04202b71983f7e131e1e0f4da9e994bde36577bda1044"
+        },
+        {
+          "material": "travel-planner/references/research-verification.md",
+          "bytes": 3932,
+          "sha256": "2dec715bcccef967224c1f6ba220f7beb8995aa95e3f257e59274c3ca4d07a8f"
+        },
+        {
+          "material": "travel-planner/references/stays-transport.md",
+          "bytes": 2247,
+          "sha256": "79eba60bfad48ac7ec0215a7146126a917a6c0f809916c5fc1c274541f8d2fee"
+        },
+        {
+          "material": "travel-planner/references/itinerary-scheduling.md",
+          "bytes": 3638,
+          "sha256": "11a0d857bafd7404e038cf2f212fc496dfd73642a7faee597cb34b7677f1635b"
+        },
+        {
+          "material": "travel-planner/references/bookings-budget.md",
+          "bytes": 1023,
+          "sha256": "de469f2764fce65c9edeb10af79cb5516bc3ca3d54e604be4fd8fec1299a6d0c"
+        },
+        {
+          "material": "travel-planner/references/deliverables.md",
+          "bytes": 10125,
+          "sha256": "b81ea7c0f7037823bc5c7620eba59a573a190e47e2c472c5646f0805a1bf34c3"
+        },
+        {
+          "material": "travel-planner/references/team-review.md",
+          "bytes": 3312,
+          "sha256": "0079e874bc2a5957c07fe5693e2008e23d1ef3461ac6a811043aa0d3b2dc8ea9"
+        },
+        {
+          "material": "travel-food-guide/SKILL.md",
+          "bytes": 4847,
+          "sha256": "f271bae0bd4f676156e88ae28e61a367c4fcac397030c735a0949c468bc73b50"
+        },
+        {
+          "material": "art-culture-expert-guide/SKILL.md",
+          "bytes": 4170,
+          "sha256": "1a16f09ed91bc7b67ae816a9825fb8d3e4fecdc56d6b6789aebddf02f245a5a3"
+        },
+        {
+          "material": "travel-food-guide/references/platform-runtime.md",
+          "bytes": 2485,
+          "sha256": "33d4921022518e3500704b7078fd413f74fe1253474307725eff17090b24fa06"
+        },
+        {
+          "material": "travel-food-guide/references/evaluation-engine.md",
+          "bytes": 2452,
+          "sha256": "c1a7eac832219a1720e825792aa1892f5caf6b5ae5ef3e847e4c9d774106fcd6"
+        },
+        {
+          "material": "travel-food-guide/references/coffee-research.md",
+          "bytes": 3353,
+          "sha256": "7ea106a782eed7547ceb886d8b8ef6bcaa3c87d3665c23cf5db585cbf43e9afa"
+        },
+        {
+          "material": "travel-food-guide/references/research-verification.md",
+          "bytes": 2273,
+          "sha256": "820664ae9535f002f0fa6a0cd4b6a92d2a1e5ec9cd398a3fa86df9204ec92162"
+        },
+        {
+          "material": "travel-food-guide/references/pacing.md",
+          "bytes": 1587,
+          "sha256": "ae89a0a34ca50b9731e7927b1fb432bcb4bc82f8b367e1df0c10e9552bbcdcc5"
+        },
+        {
+          "material": "travel-food-guide/references/itinerary-handoff.md",
+          "bytes": 1426,
+          "sha256": "25d9b629a333e7a4d17379095d8f6cb66eed7747b2d9a251c0d426827dd3e71a"
+        },
+        {
+          "material": "art-culture-expert-guide/references/platform-runtime.md",
+          "bytes": 2485,
+          "sha256": "33d4921022518e3500704b7078fd413f74fe1253474307725eff17090b24fa06"
+        },
+        {
+          "material": "art-culture-expert-guide/references/research-levels.md",
+          "bytes": 1279,
+          "sha256": "e7d4db3ad7fc690df6d7c475a65d75999d5535697e368427192c7b1c03acbfc4"
+        },
+        {
+          "material": "art-culture-expert-guide/references/research-protocol.md",
+          "bytes": 1350,
+          "sha256": "e2afe4c4e1e979f17a952d575434c2c7f86218f4f672012344f003c397dbc4f6"
+        },
+        {
+          "material": "art-culture-expert-guide/references/interpretation-engine.md",
+          "bytes": 997,
+          "sha256": "c74297be61de43b3af050279f55e4017db5dc05b5d772981d0652d526d2e0e1f"
+        },
+        {
+          "material": "art-culture-expert-guide/references/domain-frameworks.md",
+          "bytes": 2940,
+          "sha256": "cfc3c65a941bde5b8eb3d5824f3d02d7017c248cb4ab9a49efc5301db82e5182"
+        },
+        {
+          "material": "art-culture-expert-guide/references/spatial-image-verification.md",
+          "bytes": 1530,
+          "sha256": "a9b3578e27abff298d5286bb63209753cb8d16c055385d61cd506d1af50107c2"
+        },
+        {
+          "material": "art-culture-expert-guide/references/narrative-field-guide.md",
+          "bytes": 1328,
+          "sha256": "0561a95ec4c0ca49f1d26792955db8e724db9d64e45877054379fa885287b29c"
+        },
+        {
+          "material": "art-culture-expert-guide/references/delivery-modes.md",
+          "bytes": 1538,
+          "sha256": "744ebb653e35d39a26df62237c0ee95971ed83fba514a62fdd920f374b0d8093"
+        },
+        {
+          "material": "art-culture-expert-guide/references/quality-gates.md",
+          "bytes": 1419,
+          "sha256": "21f2ae4525cac8dd4e6175bd40b0aed97e98827d3011e72ebca0b2380e463ee9"
+        },
+        {
+          "material": "travel-food-guide/references/culinary-research.md",
+          "bytes": 1357,
+          "sha256": "ca9e6f6b14b7d5acb5471d53db3cdd10dab66dda1dcf6b5e748dd8f5ff105504"
+        },
+        {
+          "material": "travel-food-guide/references/delivery-modes.md",
+          "bytes": 2671,
+          "sha256": "35008ff00ac0aaea973d382c0390f6f773cc22eff23ffac3edb2f88528d4868d"
+        },
+        {
+          "material": "travel-food-guide/references/dining-brief.md",
+          "bytes": 781,
+          "sha256": "0bae343f94108e559eee33d35dfff5290f6eb251f624d230e22a7468b100baf2"
+        },
+        {
+          "material": "travel-food-guide/references/evidence-intelligence.md",
+          "bytes": 1662,
+          "sha256": "98daf744642b5b25ea05db270ad2ea7fcf66465cebd634e6f964391d58393586"
+        },
+        {
+          "material": "travel-food-guide/references/discovery-strategy.md",
+          "bytes": 1994,
+          "sha256": "0b1bad06dbc76ac017eda5395435d302f707e506342cebbb4fd3e089d47ff7e9"
+        },
+        {
+          "material": "travel-food-guide/references/city-food-radar.md",
+          "bytes": 2144,
+          "sha256": "15c5273011270ba5f291aaab1a778483b91bda3a5849844d5e0f03f24626d49a"
+        },
+        {
+          "material": "travel-food-guide/references/discovery-coverage-audit.md",
+          "bytes": 1027,
+          "sha256": "4649068542c1f9d8d537a0669728350a61260ea48fd327a193f98c6a1a5e1e30"
+        }
+      ]
+    },
+    {
+      "run": "a3",
+      "seconds": 248.2,
+      "read_operations": 30,
+      "emitted_bytes": 81754,
+      "same_content_reads_beyond_first": 2,
+      "answer_bytes": 21756,
+      "answer_sha256": "4ad09f14650fdf9eea144c25d5a32fcf66ff792d0346d89f3cfc65606d77880f",
+      "source_commit": "c14c72bfac03ddb8b30d1533f767285f4703f03b",
+      "input_sha256": "429427bb3d6b24aed996096453988c01c0fef285ef81aee47ed263b6376ff429",
+      "read_events": [
+        {
+          "material": "@input",
+          "bytes": 4817,
+          "sha256": "429427bb3d6b24aed996096453988c01c0fef285ef81aee47ed263b6376ff429"
+        },
+        {
+          "material": "travel-planner/SKILL.md",
+          "bytes": 2983,
+          "sha256": "241420bf0a95028b8a1ff1b454fb09823a2845205dea0cd0ad1a53603d5652dc"
+        },
+        {
+          "material": "travel-planner/references/platform-runtime.md",
+          "bytes": 2485,
+          "sha256": "33d4921022518e3500704b7078fd413f74fe1253474307725eff17090b24fa06"
+        },
+        {
+          "material": "travel-planner/references/security-storage.md",
+          "bytes": 958,
+          "sha256": "cedde27880415dc5f674dfcd3dbf5897b8651742ce86c5782caff161602aec03"
+        },
+        {
+          "material": "travel-planner/references/workflow.md",
+          "bytes": 3358,
+          "sha256": "7269d8c6cdffc28072c378f7a957d1a5c7815f5f5a7e1afa986d0c75680565fa"
+        },
+        {
+          "material": "travel-planner/references/preferences.md",
+          "bytes": 1417,
+          "sha256": "dfc41b2a11d88525c86dd53dc576826da8d5fad59bd0a73551a0e86c2304bb8c"
+        },
+        {
+          "material": "travel-planner/references/discovery-decisions.md",
+          "bytes": 2985,
+          "sha256": "499433d92e404b06f7c04202b71983f7e131e1e0f4da9e994bde36577bda1044"
+        },
+        {
+          "material": "travel-planner/references/research-verification.md",
+          "bytes": 3932,
+          "sha256": "2dec715bcccef967224c1f6ba220f7beb8995aa95e3f257e59274c3ca4d07a8f"
+        },
+        {
+          "material": "travel-planner/references/stays-transport.md",
+          "bytes": 2247,
+          "sha256": "79eba60bfad48ac7ec0215a7146126a917a6c0f809916c5fc1c274541f8d2fee"
+        },
+        {
+          "material": "travel-planner/references/itinerary-scheduling.md",
+          "bytes": 3638,
+          "sha256": "11a0d857bafd7404e038cf2f212fc496dfd73642a7faee597cb34b7677f1635b"
+        },
+        {
+          "material": "travel-planner/references/bookings-budget.md",
+          "bytes": 1023,
+          "sha256": "de469f2764fce65c9edeb10af79cb5516bc3ca3d54e604be4fd8fec1299a6d0c"
+        },
+        {
+          "material": "travel-planner/references/deliverables.md",
+          "bytes": 10125,
+          "sha256": "b81ea7c0f7037823bc5c7620eba59a573a190e47e2c472c5646f0805a1bf34c3"
+        },
+        {
+          "material": "travel-planner/references/team-review.md",
+          "bytes": 3312,
+          "sha256": "0079e874bc2a5957c07fe5693e2008e23d1ef3461ac6a811043aa0d3b2dc8ea9"
+        },
+        {
+          "material": "travel-food-guide/SKILL.md",
+          "bytes": 4847,
+          "sha256": "f271bae0bd4f676156e88ae28e61a367c4fcac397030c735a0949c468bc73b50"
+        },
+        {
+          "material": "art-culture-expert-guide/SKILL.md",
+          "bytes": 4170,
+          "sha256": "1a16f09ed91bc7b67ae816a9825fb8d3e4fecdc56d6b6789aebddf02f245a5a3"
+        },
+        {
+          "material": "travel-food-guide/references/platform-runtime.md",
+          "bytes": 2485,
+          "sha256": "33d4921022518e3500704b7078fd413f74fe1253474307725eff17090b24fa06"
+        },
+        {
+          "material": "travel-food-guide/references/research-verification.md",
+          "bytes": 2273,
+          "sha256": "820664ae9535f002f0fa6a0cd4b6a92d2a1e5ec9cd398a3fa86df9204ec92162"
+        },
+        {
+          "material": "travel-food-guide/references/culinary-research.md",
+          "bytes": 1357,
+          "sha256": "ca9e6f6b14b7d5acb5471d53db3cdd10dab66dda1dcf6b5e748dd8f5ff105504"
+        },
+        {
+          "material": "travel-food-guide/references/evaluation-engine.md",
+          "bytes": 2452,
+          "sha256": "c1a7eac832219a1720e825792aa1892f5caf6b5ae5ef3e847e4c9d774106fcd6"
+        },
+        {
+          "material": "travel-food-guide/references/delivery-modes.md",
+          "bytes": 2671,
+          "sha256": "35008ff00ac0aaea973d382c0390f6f773cc22eff23ffac3edb2f88528d4868d"
+        },
+        {
+          "material": "travel-food-guide/references/coffee-research.md",
+          "bytes": 3353,
+          "sha256": "7ea106a782eed7547ceb886d8b8ef6bcaa3c87d3665c23cf5db585cbf43e9afa"
+        },
+        {
+          "material": "art-culture-expert-guide/references/platform-runtime.md",
+          "bytes": 2485,
+          "sha256": "33d4921022518e3500704b7078fd413f74fe1253474307725eff17090b24fa06"
+        },
+        {
+          "material": "art-culture-expert-guide/references/research-levels.md",
+          "bytes": 1279,
+          "sha256": "e7d4db3ad7fc690df6d7c475a65d75999d5535697e368427192c7b1c03acbfc4"
+        },
+        {
+          "material": "art-culture-expert-guide/references/interpretation-engine.md",
+          "bytes": 997,
+          "sha256": "c74297be61de43b3af050279f55e4017db5dc05b5d772981d0652d526d2e0e1f"
+        },
+        {
+          "material": "art-culture-expert-guide/references/delivery-modes.md",
+          "bytes": 1538,
+          "sha256": "744ebb653e35d39a26df62237c0ee95971ed83fba514a62fdd920f374b0d8093"
+        },
+        {
+          "material": "art-culture-expert-guide/references/quality-gates.md",
+          "bytes": 1419,
+          "sha256": "21f2ae4525cac8dd4e6175bd40b0aed97e98827d3011e72ebca0b2380e463ee9"
+        },
+        {
+          "material": "art-culture-expert-guide/references/research-protocol.md",
+          "bytes": 1350,
+          "sha256": "e2afe4c4e1e979f17a952d575434c2c7f86218f4f672012344f003c397dbc4f6"
+        },
+        {
+          "material": "art-culture-expert-guide/references/domain-frameworks.md",
+          "bytes": 2940,
+          "sha256": "cfc3c65a941bde5b8eb3d5824f3d02d7017c248cb4ab9a49efc5301db82e5182"
+        },
+        {
+          "material": "art-culture-expert-guide/references/spatial-image-verification.md",
+          "bytes": 1530,
+          "sha256": "a9b3578e27abff298d5286bb63209753cb8d16c055385d61cd506d1af50107c2"
+        },
+        {
+          "material": "art-culture-expert-guide/references/narrative-field-guide.md",
+          "bytes": 1328,
+          "sha256": "0561a95ec4c0ca49f1d26792955db8e724db9d64e45877054379fa885287b29c"
+        }
+      ]
+    },
+    {
+      "run": "b3",
+      "seconds": 286.1,
+      "read_operations": 16,
+      "emitted_bytes": 62326,
+      "same_content_reads_beyond_first": 3,
+      "answer_bytes": 22041,
+      "answer_sha256": "729751a99798ba5fb85e90669e25393b1ea4ef18c361115eaa57fefd069b9934",
+      "source_commit": "b3d3c55340369d26a25b34895193adc5c7d44d3d",
+      "input_sha256": "429427bb3d6b24aed996096453988c01c0fef285ef81aee47ed263b6376ff429",
+      "read_events": [
+        {
+          "material": "@input",
+          "bytes": 4817,
+          "sha256": "429427bb3d6b24aed996096453988c01c0fef285ef81aee47ed263b6376ff429"
+        },
+        {
+          "material": "travel-planner/SKILL.md",
+          "bytes": 3154,
+          "sha256": "13ed15ff6ae1aa7674191538081a45dbaf97a46241484ac76597621bb2504561"
+        },
+        {
+          "material": "travel-planner/references/platform-runtime.md",
+          "bytes": 2485,
+          "sha256": "33d4921022518e3500704b7078fd413f74fe1253474307725eff17090b24fa06"
+        },
+        {
+          "material": "travel-planner/references/security-storage.md",
+          "bytes": 958,
+          "sha256": "cedde27880415dc5f674dfcd3dbf5897b8651742ce86c5782caff161602aec03"
+        },
+        {
+          "material": "travel-planner/references/workflow.md",
+          "bytes": 5882,
+          "sha256": "56cb0e027821ba2b8be7c764a18f3120332737a6e9f4b4fceb557f22b2abf9ac"
+        },
+        {
+          "material": "travel-planner/references/preferences.md",
+          "bytes": 1417,
+          "sha256": "dfc41b2a11d88525c86dd53dc576826da8d5fad59bd0a73551a0e86c2304bb8c"
+        },
+        {
+          "material": "travel-planner/references/discovery-decisions.md",
+          "bytes": 2985,
+          "sha256": "499433d92e404b06f7c04202b71983f7e131e1e0f4da9e994bde36577bda1044"
+        },
+        {
+          "material": "travel-planner/references/research-verification.md",
+          "bytes": 6038,
+          "sha256": "df7bc2c54b57e715d2468801a8c99d1216cf4a37e34e2b83d7ce40741158fbb9"
+        },
+        {
+          "material": "travel-planner/references/stays-transport.md",
+          "bytes": 2247,
+          "sha256": "79eba60bfad48ac7ec0215a7146126a917a6c0f809916c5fc1c274541f8d2fee"
+        },
+        {
+          "material": "travel-planner/references/itinerary-scheduling.md",
+          "bytes": 3638,
+          "sha256": "11a0d857bafd7404e038cf2f212fc496dfd73642a7faee597cb34b7677f1635b"
+        },
+        {
+          "material": "travel-planner/references/bookings-budget.md",
+          "bytes": 1023,
+          "sha256": "de469f2764fce65c9edeb10af79cb5516bc3ca3d54e604be4fd8fec1299a6d0c"
+        },
+        {
+          "material": "travel-planner/references/deliverables.md",
+          "bytes": 12426,
+          "sha256": "4b4a82256161f67ddf7509180408d77cd175c3eadbec2563673772d9abb7634a"
+        },
+        {
+          "material": "travel-planner/references/team-review.md",
+          "bytes": 3333,
+          "sha256": "1879643449b3e49a704cb8767e042e53a6d8a745bfc5e32c041a95ad40b2d84f"
+        },
+        {
+          "material": "travel-planner/references/research-verification.md",
+          "bytes": 6038,
+          "sha256": "df7bc2c54b57e715d2468801a8c99d1216cf4a37e34e2b83d7ce40741158fbb9"
+        },
+        {
+          "material": "travel-planner/references/stays-transport.md",
+          "bytes": 2247,
+          "sha256": "79eba60bfad48ac7ec0215a7146126a917a6c0f809916c5fc1c274541f8d2fee"
+        },
+        {
+          "material": "travel-planner/references/itinerary-scheduling.md",
+          "bytes": 3638,
+          "sha256": "11a0d857bafd7404e038cf2f212fc496dfd73642a7faee597cb34b7677f1635b"
+        }
+      ]
+    }
+  ],
+  "mock_research_counts": {
+    "gallery": 1,
+    "hotel-b": 2,
+    "hotel-a": 1,
+    "coffee": 1,
+    "festival": 1,
+    "restaurant": 1
+  },
+  "post_fix_replays": [
+    {
+      "run": "c1",
+      "answer_bytes": 22331,
+      "answer_sha256": "98e4847d5bde0b04f69b990b354802bd077b1e20fe7b6e54a809de1f4fae4a48",
+      "scope": "Targeted behavior retest; not a comparative performance measurement"
+    },
+    {
+      "run": "c2",
+      "answer_bytes": 2519,
+      "answer_sha256": "6ed1af1124af5d0f4ce7994323d6f1bef40c81de12144f31f6033a6ca941c444",
+      "scope": "Targeted behavior retest; not a comparative performance measurement"
+    },
+    {
+      "run": "c3",
+      "answer_bytes": 1464,
+      "answer_sha256": "1bf25f725f2e7f4602e39e2c3753dde7de2b6dd7776b67e635da872f958835e0",
+      "scope": "Targeted behavior retest; not a comparative performance measurement"
+    }
+  ],
+  "remaining_findings": [
+    "C1 states 13:30 instead of 14:30 as 16:00 minus 90 minutes; conservative arithmetic error, main timeline unaffected.",
+    "Full itinerary remains conditional on missing meal, luggage and transfer evidence."
+  ]
+}
