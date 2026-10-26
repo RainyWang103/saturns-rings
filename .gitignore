@@ -10,3 +10,4 @@ build/
 private/
 orders/
 .DS_Store
+node_modules/

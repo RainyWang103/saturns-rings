@@ -1,4 +1,4 @@
-/* Optional real-browser check. No live services or travel research.
+/* Real-browser check, run by validation CI. No live services or travel research.
  * node check_delivery_browser.cjs PREVIEW.html OUTPUT_DIR [BASELINE.html]
  * Requires Playwright. Set PLAYWRIGHT_MODULE and CHROMIUM_EXECUTABLE if not
  * installed locally; FONT_CSS can supply a local CJK stylesheet for inspection.
@@ -12,10 +12,11 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
  if(!input||!out)throw Error('Expected PREVIEW.html OUTPUT_DIR [BASELINE.html]');
  fs.mkdirSync(out,{recursive:true});
  const browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_EXECUTABLE?{executablePath:process.env.CHROMIUM_EXECUTABLE}:{}),args:['--no-sandbox','--disable-dev-shm-usage','--use-gl=angle','--use-angle=swiftshader']});
- const page=await browser.newPage();
+ const context=await browser.newContext();
+ const page=await context.newPage();
  const report={errors:[],network:[],viewports:[],interaction:{}};
  page.on('pageerror',e=>report.errors.push(e.message));
- await page.route(/^https?:/,route=>{report.network.push(route.request().url());return route.abort()});
+ await context.route(/^https?:/,route=>{report.network.push(route.request().url());return route.abort()});
  const open=async file=>{
   await page.goto(pathToFileURL(path.resolve(file)).href);
   if(process.env.FONT_CSS)await page.addStyleTag({content:fs.readFileSync(process.env.FONT_CSS,'utf8')});
@@ -53,7 +54,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
  await page.pdf({path:path.join(out,'preview-print.pdf'),printBackground:true,preferCSSPageSize:true});
  await page.evaluate(()=>window.dispatchEvent(new Event('afterprint')));report.interaction.printStateRestored=await page.locator('#map-sources').getAttribute('open')===null;
  await page.emulateMedia({media:'screen'});
- const blocked=await browser.newPage();await blocked.addInitScript(()=>Object.defineProperty(window,'localStorage',{get(){throw new Error('Storage disabled')}}));
+ const blocked=await context.newPage();await blocked.addInitScript(()=>Object.defineProperty(window,'localStorage',{get(){throw new Error('Storage disabled')}}));
  blocked.on('pageerror',e=>report.errors.push(e.message));await blocked.goto(pathToFileURL(path.resolve(input)).href);await blocked.locator('[data-check="concert"]').check();report.interaction.noStorageWorks=await blocked.locator('[data-check="concert"]').isChecked();
  fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2));
  await browser.close();
