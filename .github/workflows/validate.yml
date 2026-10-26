@@ -11,6 +11,7 @@ jobs:
   validate:
     name: validate-skills
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
@@ -24,3 +25,30 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Verify package build
         run: python scripts/package-skills.py --sha "$GITHUB_SHA" --output dist
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '22'
+      - name: Install pinned offline-browser test dependency
+        run: npm ci --prefix tests/browser --ignore-scripts --no-audit --no-fund
+      - name: Install Chromium
+        run: tests/browser/node_modules/.bin/playwright install --with-deps chromium
+      - name: Render complete and locally updated itineraries
+        run: python tests/cases/travel-planner/render_update_fixture.py --output build/delivery
+      - name: Check complete HTML in Chromium
+        env:
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/tests/browser/node_modules/playwright
+        run: node tests/cases/travel-planner/check_delivery_browser.cjs build/delivery/original.html build/browser-original
+      - name: Check updated HTML in Chromium
+        env:
+          PLAYWRIGHT_MODULE: ${{ github.workspace }}/tests/browser/node_modules/playwright
+        run: node tests/cases/travel-planner/check_delivery_browser.cjs build/delivery/updated.html build/browser-updated build/delivery/original.html
+      - name: Upload fictional delivery check evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: delivery-checks-${{ github.run_id }}
+          path: |
+            build/delivery/
+            build/browser-*/
+          if-no-files-found: ignore
+          retention-days: 7
