@@ -44,7 +44,7 @@ DAYS = [
                   execution='演示暂按11:00规划，实际场次待公布；12:15–13:15午餐，14:00–16:00回住宿休息。',
                   highlight='看器底、口沿与接缝，比单看成品陈列更容易理解制作过程。',
                   warning='热加工区是否开放待核；如无演示，以常设展为主，不保证现场制作。'),
-             dict(time='19:00–21:15', title='松庭音乐厅 · 室内乐之夜', icon='ticket', state='未开放预订',
+             dict(time='19:00–21:15', title='松庭音乐厅 · 室内乐之夜', icon='music', state='未开放预订',
                   intro='建议关注弦乐声部之间的问答，并在慢乐章留意中提琴如何承接主题。音乐厅尺度较小，选择视线无遮挡的位置比追求最前排更实用。',
                   execution='16:45–17:45提前晚餐，17:45离餐；19:00前完成寄存与找座，19:30开演。节目、票价与散场时间均待公布。',
                   highlight='演前保留安静休息时间，节目单公布后再补充作品导听。',
@@ -121,12 +121,13 @@ def render(template=TEMPLATE):
     }
     # Each priority entry has its own stable local checkbox key.
     before = before.replace('data-check="{{KEY}}"', 'data-check="stay"', 1).replace('data-check="{{KEY}}"', 'data-check="weather"', 1)
-    before = before.replace('data-check="stay"><span><b>{{对象}}｜{{动作}}</b>', 'data-check="stay"><span><b>河岸小院｜确认入住与行李</b>')
-    before = before.replace('data-check="weather"><span><b>{{对象}}｜{{动作}}</b>', 'data-check="weather"><span><b>雕塑步道｜按天气决定</b>')
+    for key, title in [('stay', '河岸小院｜确认入住与行李'), ('weather', '雕塑步道｜按天气决定')]:
+        before = re.sub(r'(data-check="' + key + r'"><span><b>(?:<svg[^>]*>.*?</svg>)?)' + re.escape('{{对象}}｜{{动作}}'), lambda m: m[1] + title, before)
+    before = before.replace('#icon-ticket"></use></svg>{{对象}}', '#icon-music"></use></svg>{{对象}}')
     nav = ''.join(f'<a href="#day{i}">6/{11+i} · D0{i}</a>' for i in range(1, 4))
     before = re.sub(r'<!-- REPEAT 每天一个 -->.*?<!-- /REPEAT -->', nav, before, flags=re.S)
     anchor_template = re.search(r'<div class="anchor-card" id="anchor-.*?</div>', before, re.S)[0]
-    anchors = ''.join(fill(anchor_template, dict(common, KEY=f'day{i}', **{'M/D':f'6/{11+i}', '名称/编号':day['anchor'],
+    anchors = ''.join(fill(anchor_template.replace('#icon-art', '#icon-music' if i == 2 else '#icon-plane'), dict(common, KEY=f'day{i}', **{'M/D':f'6/{11+i}', '名称/编号':day['anchor'],
                    '时间、地址、来源层级；被替换的旧信息写“旧…不可沿用”':day['anchor_time']})) for i,day in enumerate(DAYS,1))
     before = before.replace(anchor_template, anchors)
     # The demonstration contains no working telephone number.
@@ -160,6 +161,8 @@ def render(template=TEMPLATE):
                 block = block.replace('</li>', '；{{缓冲原因}}另留{{缓冲分钟}}分钟，目标{{报到钟点}}前到场。{{必要条件与失败备选}}</li>')
             if '步行' == mode:
                 block = block.replace('#icon-train','#icon-walk')
+            elif mode == '出租':
+                block = block.replace('#icon-train','#icon-car')
             elif '列车' not in mode and '快线' not in mode:
                 block = re.sub(r'<svg class="icon".*?</svg>', '', block)
             transfers.append(fill(block, values))
